@@ -1,0 +1,1654 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background: #f7f9f7;
+    font-family: "Inter", sans-serif;
+    color: #263238;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.donor-page {
+    min-height: 100vh;
+    background: #f7f9f7;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.donor-navbar {
+    min-height: 72px;
+    padding: 0 6%;
+    background: #ffffff;
+    border-bottom: 1px solid #e3eae5;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.donor-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #174d35;
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.donor-logo-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f47c20;
+    color: white;
+
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.donor-logo span:last-child span {
+    color: #f47c20;
+}
+
+.donor-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.donor-nav-links a {
+    padding: 10px 14px;
+
+    border-radius: 9px;
+
+    color: #53615b;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.donor-nav-links a:hover {
+    background: #edf7f1;
+    color: #174d35;
+}
+
+.donor-logout-btn {
+    padding: 10px 16px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #fff1e7;
+    color: #dc6814;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: all 0.2s ease;
+}
+
+.donor-logout-btn:hover {
+    background: #f47c20;
+    color: #ffffff;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.donor-header {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    padding: 42px 0 32px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.donor-eyebrow,
+.listings-eyebrow,
+.form-eyebrow {
+    margin-bottom: 7px;
+
+    color: #f47c20;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.donor-header h1 {
+    color: #103b29;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.donor-header h1 span {
+    display: block;
+    color: #f47c20;
+}
+
+.donor-header > div > p:last-child {
+    max-width: 600px;
+    margin-top: 10px;
+
+    color: #77838f;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.add-food-header-btn,
+.add-food-btn,
+.empty-add-btn {
+    border: none;
+    border-radius: 11px;
+
+    background: #f47c20;
+    color: #ffffff;
+
+    font-weight: 700;
+
+    transition: all 0.2s ease;
+}
+
+.add-food-header-btn {
+    min-width: 145px;
+    height: 46px;
+    padding: 0 18px;
+
+    font-size: 14px;
+}
+
+.add-food-header-btn span {
+    font-size: 18px;
+    margin-right: 4px;
+}
+
+.add-food-header-btn:hover,
+.add-food-btn:hover,
+.empty-add-btn:hover {
+    background: #dc6814;
+    transform: translateY(-1px);
+}
+
+/* =====================================================
+   ALERTS
+===================================================== */
+
+.donor-alert {
+    width: min(1180px, 92%);
+    margin: 0 auto 20px;
+
+    padding: 15px 18px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.donor-alert > span {
+    font-size: 18px;
+}
+
+.donor-alert strong {
+    display: block;
+    margin-bottom: 3px;
+
+    font-size: 13px;
+}
+
+.donor-alert p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.error-alert {
+    background: #fff1f1;
+    border: 1px solid #f1cccc;
+    color: #c94444;
+}
+
+.success-alert {
+    background: #edf8f1;
+    border: 1px solid #cce8d7;
+    color: #238b5a;
+}
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.donor-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.donor-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    min-height: 105px;
+
+    padding: 19px;
+
+    background: #ffffff;
+    border: 1px solid #e3eae5;
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    box-shadow: 0 7px 25px rgba(23, 77, 53, 0.06);
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.stat-icon.orange {
+    background: #fff1e7;
+    color: #f47c20;
+}
+
+.stat-icon.green {
+    background: #edf7f1;
+    color: #238b5a;
+}
+
+.stat-icon.blue {
+    background: #edf4ff;
+    color: #3678c7;
+}
+
+.stat-icon.red {
+    background: #fff1f1;
+    color: #d84b4b;
+}
+
+.stat-card span {
+    display: block;
+
+    color: #77838f;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.stat-card strong {
+    display: block;
+    margin-top: 3px;
+
+    color: #174d35;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+/* =====================================================
+   FORM CARD
+===================================================== */
+
+.donor-form-card {
+    margin-bottom: 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3eae5;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(23, 77, 53, 0.08);
+
+    overflow: hidden;
+}
+
+.donor-form-header {
+    padding: 24px 26px;
+
+    background: #f8fbf9;
+
+    border-bottom: 1px solid #e3eae5;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.donor-form-header h2 {
+    color: #103b29;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+}
+
+.donor-form-header p:last-child {
+    margin-top: 5px;
+
+    color: #77838f;
+
+    font-size: 13px;
+}
+
+.close-form-btn {
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid #e0e7e2;
+    border-radius: 9px;
+
+    background: #ffffff;
+    color: #66736d;
+
+    font-size: 23px;
+    line-height: 1;
+
+    transition: all 0.2s ease;
+}
+
+.close-form-btn:hover {
+    background: #fff1e7;
+    color: #dc6814;
+}
+
+.donor-form {
+    padding: 26px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-field label,
+.offer-price-field label {
+    color: #34423b;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea,
+.offer-price-field input {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #dce5df;
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #ffffff;
+    color: #263238;
+
+    font-size: 13px;
+
+    transition: all 0.2s ease;
+}
+
+.form-field input,
+.form-field select {
+    height: 43px;
+}
+
+.form-field textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus,
+.offer-price-field input:focus {
+    border-color: #f47c20;
+    box-shadow: 0 0 0 3px rgba(244, 124, 32, 0.09);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #a0aaa4;
+}
+
+/* OFFER */
+
+.offer-section {
+    grid-column: 1 / -1;
+
+    padding: 17px;
+
+    background: #fffaf6;
+
+    border: 1px solid #f6dcc8;
+    border-radius: 12px;
+}
+
+.offer-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #4a574f;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.offer-checkbox input {
+    width: 17px;
+    height: 17px;
+
+    accent-color: #f47c20;
+}
+
+.offer-price-field {
+    max-width: 300px;
+    margin-top: 14px;
+}
+
+.form-actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    padding-top: 5px;
+}
+
+.form-cancel-btn,
+.form-save-btn {
+    height: 43px;
+
+    padding: 0 18px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-cancel-btn {
+    border: 1px solid #dce5df;
+    background: #ffffff;
+    color: #5e6963;
+}
+
+.form-cancel-btn:hover {
+    background: #f5f7f5;
+}
+
+.form-save-btn {
+    border: none;
+    background: #174d35;
+    color: #ffffff;
+}
+
+.form-save-btn:hover {
+    background: #103b29;
+}
+
+.button-spinner {
+    width: 13px;
+    height: 13px;
+
+    display: inline-block;
+
+    margin-right: 7px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #ffffff;
+
+    border-radius: 50%;
+
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =====================================================
+   LISTINGS
+===================================================== */
+
+.donor-listings {
+    margin-top: 25px;
+}
+
+.listings-header {
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.listings-header h2,
+.donor-orders-section h2 {
+    color: #103b29;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.add-food-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+}
+
+/* =====================================================
+   FOOD GRID
+===================================================== */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.donor-food-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e3eae5;
+    border-radius: 16px;
+
+    box-shadow: 0 7px 25px rgba(23, 77, 53, 0.06);
+
+    transition: all 0.2s ease;
+}
+
+.donor-food-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 35px rgba(23, 77, 53, 0.11);
+}
+
+.food-card-image {
+    height: 185px;
+    position: relative;
+    overflow: hidden;
+}
+
+.food-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.donor-food-card:hover .food-card-image img {
+    transform: scale(1.04);
+}
+
+.food-status {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+}
+
+.food-status.available {
+    background: #edf8f1;
+    color: #238b5a;
+}
+
+.food-status.sold {
+    background: #fff1f1;
+    color: #d84b4b;
+}
+
+.food-status.expired {
+    background: #fff5e5;
+    color: #a66b00;
+}
+
+.food-card-content {
+    padding: 17px;
+}
+
+.food-category {
+    color: #f47c20;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.food-card-title h3 {
+    margin-top: 4px;
+
+    color: #174d35;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+}
+
+.food-description {
+    min-height: 38px;
+    margin: 8px 0 14px;
+
+    color: #77838f;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.food-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+}
+
+.food-info-grid > div {
+    padding: 9px;
+
+    background: #f8faf8;
+
+    border-radius: 8px;
+}
+
+.food-info-grid small,
+.food-expiry small {
+    display: block;
+
+    color: #8a948e;
+
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.food-info-grid strong {
+    display: block;
+    margin-top: 3px;
+
+    color: #174d35;
+
+    font-size: 12px;
+}
+
+.food-expiry,
+.food-pickup {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+
+    margin-top: 12px;
+}
+
+.food-expiry > span,
+.food-pickup > span {
+    font-size: 14px;
+}
+
+.food-expiry strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #53615b;
+
+    font-size: 11px;
+}
+
+.expired-text {
+    color: #d84b4b !important;
+}
+
+.food-pickup p {
+    color: #53615b;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.food-card-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+
+    margin-top: 16px;
+}
+
+.edit-food-btn,
+.delete-food-btn {
+    height: 38px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.edit-food-btn {
+    border: 1px solid #cfe0d5;
+
+    background: #edf7f1;
+    color: #174d35;
+}
+
+.edit-food-btn:hover {
+    background: #dcefe4;
+}
+
+.delete-food-btn {
+    border: 1px solid #f0cccc;
+
+    background: #fff1f1;
+    color: #d84b4b;
+}
+
+.delete-food-btn:hover {
+    background: #ffe1e1;
+}
+
+/* =====================================================
+   EMPTY LISTINGS
+===================================================== */
+
+.donor-empty {
+    padding: 55px 20px;
+
+    background: #ffffff;
+
+    border: 1px dashed #ccd9d1;
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+.empty-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #edf7f1;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+}
+
+.donor-empty h3 {
+    color: #174d35;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+}
+
+.donor-empty p {
+    margin: 7px 0 17px;
+
+    color: #77838f;
+
+    font-size: 13px;
+}
+
+.empty-add-btn {
+    padding: 10px 16px;
+}
+
+/* =====================================================
+   CUSTOMER ORDERS
+===================================================== */
+
+.donor-orders-section {
+    margin-top: 48px;
+    padding-top: 38px;
+
+    border-top: 1px solid #dfe7e2;
+}
+
+.orders-section-header {
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.orders-section-subtitle {
+    margin-top: 6px;
+
+    color: #77838f;
+
+    font-size: 13px;
+}
+
+/* REFRESH */
+
+.refresh-orders-btn {
+    height: 42px;
+
+    padding: 0 16px;
+
+    border: 1px solid #d8e3dc;
+    border-radius: 9px;
+
+    background: #ffffff;
+    color: #174d35;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: all 0.2s ease;
+}
+
+.refresh-orders-btn:hover {
+    background: #edf7f1;
+    border-color: #174d35;
+}
+
+/* =====================================================
+   ORDER LIST
+===================================================== */
+
+.donor-orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* =====================================================
+   ORDER CARD
+===================================================== */
+
+.donor-order-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e8e3;
+    border-radius: 16px;
+
+    box-shadow: 0 6px 24px rgba(23, 77, 53, 0.06);
+
+    transition: all 0.2s ease;
+}
+
+.donor-order-card:hover {
+    border-color: #cfded5;
+
+    box-shadow: 0 12px 30px rgba(23, 77, 53, 0.09);
+}
+
+/* =====================================================
+   ORDER TOP
+===================================================== */
+
+.donor-order-top {
+    min-height: 72px;
+
+    padding: 15px 20px;
+
+    background: #fbfcfb;
+
+    border-bottom: 1px solid #e5ebe7;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-label {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #f47c20;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+.donor-order-top h3 {
+    color: #174d35;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+
+.donor-order-status {
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.donor-order-status.placed {
+    background: #fff1e7;
+    color: #dc6814;
+}
+
+.donor-order-status.completed {
+    background: #eaf8f0;
+    color: #238b5a;
+}
+
+.donor-order-status.cancelled {
+    background: #fff1f1;
+    color: #d84b4b;
+}
+
+.donor-order-status.pending {
+    background: #fff7df;
+    color: #9a7210;
+}
+
+/* =====================================================
+   ORDER DETAILS
+===================================================== */
+
+.donor-order-details {
+    padding: 18px 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.donor-order-detail {
+    min-height: 72px;
+
+    padding: 12px;
+
+    background: #fafcfb;
+
+    border: 1px solid #e6ece8;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.donor-order-detail > span {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #edf7f1;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+.donor-order-detail small {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #8a948e;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.donor-order-detail strong {
+    display: block;
+
+    color: #34423b;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* =====================================================
+   DELIVERY ADDRESS
+===================================================== */
+
+.donor-order-address {
+    margin: 0 20px;
+
+    padding: 13px 14px;
+
+    background: #f8faf8;
+
+    border: 1px solid #e3eae5;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.donor-order-address > span {
+    font-size: 15px;
+}
+
+.donor-order-address small {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #8a948e;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.donor-order-address p {
+    color: #34423b;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =====================================================
+   FOOD ORDERED
+===================================================== */
+
+.donor-order-items {
+    margin: 18px 20px 0;
+
+    padding-top: 17px;
+
+    border-top: 1px solid #e5ebe7;
+}
+
+.donor-order-items-title {
+    margin-bottom: 10px;
+
+    color: #174d35;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.donor-order-item {
+    padding: 12px 13px;
+    margin-bottom: 7px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4ebe7;
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.donor-order-item:last-child {
+    margin-bottom: 0;
+}
+
+.donor-order-item > div:first-child {
+    min-width: 0;
+}
+
+.donor-order-item strong {
+    display: block;
+
+    color: #174d35;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.donor-order-item > div:first-child span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #8a948e;
+
+    font-size: 10px;
+}
+
+.donor-order-item-price {
+    flex-shrink: 0;
+
+    text-align: right;
+}
+
+.donor-order-item-price span {
+    display: block;
+
+    color: #77838f;
+
+    font-size: 10px;
+}
+
+.donor-order-item-price strong {
+    margin-top: 3px;
+
+    color: #174d35;
+
+    font-size: 14px;
+}
+
+/* =====================================================
+   ORDER FOOTER
+===================================================== */
+
+.donor-order-footer {
+    margin-top: 18px;
+
+    padding: 14px 20px;
+
+    background: #edf7f1;
+
+    border-top: 1px solid #dceae1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.donor-order-footer span {
+    color: #53615b;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.donor-order-footer strong {
+    color: #174d35;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+/* =====================================================
+   EMPTY ORDERS
+===================================================== */
+
+.donor-orders-empty {
+    padding: 60px 20px;
+
+    background: #ffffff;
+
+    border: 1px dashed #ccd9d1;
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+.orders-empty-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #edf7f1;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+}
+
+.donor-orders-empty h3 {
+    color: #174d35;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+}
+
+.donor-orders-empty p {
+    max-width: 450px;
+
+    margin: 7px auto 18px;
+
+    color: #77838f;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.view-food-orders-btn {
+    display: inline-block;
+
+    padding: 10px 16px;
+
+    border-radius: 9px;
+
+    background: #f47c20;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.view-food-orders-btn:hover {
+    background: #dc6814;
+}
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.donor-loading,
+.orders-loading-box {
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.donor-loading h3 {
+    margin-top: 15px;
+
+    color: #174d35;
+
+    font-family: "Poppins", sans-serif;
+}
+
+.donor-loading p,
+.orders-loading-box p {
+    margin-top: 5px;
+
+    color: #77838f;
+
+    font-size: 13px;
+}
+
+.donor-spinner {
+    width: 38px;
+    height: 38px;
+
+    border: 4px solid #dce9e1;
+    border-top-color: #f47c20;
+
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .donor-navbar {
+        padding: 0 4%;
+    }
+
+    .donor-header,
+    .donor-container {
+        width: 92%;
+    }
+
+    .donor-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .donor-order-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .donor-navbar {
+        padding: 12px 18px;
+
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .donor-logo {
+        font-size: 18px;
+    }
+
+    .donor-logo-icon {
+        width: 37px;
+        height: 37px;
+        border-radius: 10px;
+    }
+
+    .donor-nav-links {
+        width: 100%;
+
+        overflow-x: auto;
+
+        padding-bottom: 2px;
+
+        scrollbar-width: none;
+    }
+
+    .donor-nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .donor-nav-links a,
+    .donor-logout-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
+
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .donor-header {
+        width: 92%;
+
+        padding: 28px 0 22px;
+
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .donor-header h1 {
+        font-size: 28px;
+    }
+
+    .donor-header > div > p:last-child {
+        font-size: 13px;
+    }
+
+    .add-food-header-btn {
+        width: 100%;
+    }
+
+    .donor-container {
+        width: 92%;
+    }
+
+    .donor-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stat-card {
+        min-height: 90px;
+        padding: 13px;
+        gap: 10px;
+    }
+
+    .stat-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+    }
+
+    .stat-card strong {
+        font-size: 20px;
+    }
+
+    .stat-card span {
+        font-size: 10px;
+    }
+
+    .donor-form {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .form-field.full-width,
+    .offer-section,
+    .form-actions {
+        grid-column: auto;
+    }
+
+    .donor-form-header {
+        padding: 19px;
+    }
+
+    .donor-form-header h2 {
+        font-size: 20px;
+    }
+
+    .listings-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .add-food-btn {
+        width: 100%;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ORDERS MOBILE */
+
+    .donor-orders-section {
+        margin-top: 35px;
+        padding-top: 28px;
+    }
+
+    .orders-section-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .orders-section-header h2 {
+        font-size: 23px;
+    }
+
+    .refresh-orders-btn {
+        width: 100%;
+    }
+
+    .donor-order-top {
+        padding: 14px 15px;
+    }
+
+    .donor-order-details {
+        grid-template-columns: 1fr 1fr;
+        padding: 14px 15px;
+        gap: 8px;
+    }
+
+    .donor-order-detail {
+        min-height: 70px;
+        padding: 10px;
+    }
+
+    .donor-order-detail strong {
+        font-size: 11px;
+    }
+
+    .donor-order-address {
+        margin: 0 15px;
+    }
+
+    .donor-order-items {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .donor-order-footer {
+        padding: 13px 15px;
+    }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .donor-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .donor-header h1 {
+        font-size: 25px;
+    }
+
+    .donor-order-details {
+        grid-template-columns: 1fr;
+    }
+
+    .donor-order-top h3 {
+        font-size: 17px;
+    }
+
+    .donor-order-status {
+        padding: 5px 9px;
+        font-size: 8px;
+    }
+
+    .donor-order-item {
+        align-items: flex-start;
+    }
+
+    .donor-order-item-price strong {
+        font-size: 13px;
+    }
+
+    .donor-order-footer span {
+        max-width: 190px;
+    }
+}

@@ -1,0 +1,511 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+.orders-page {
+    min-height: 100vh;
+    background: #f7faf8;
+    color: #24332b;
+    font-family: "Inter", sans-serif;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.orders-navbar {
+    height: 74px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5ece8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.orders-logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    color: #174d35;
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.orders-logo span:last-child span {
+    color: #f47b20;
+}
+
+.orders-logo-icon {
+    font-size: 28px;
+}
+
+.orders-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.orders-nav-links a {
+    text-decoration: none;
+    color: #63736b;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.orders-nav-links a:hover,
+.orders-nav-links a.active {
+    color: #f47b20;
+}
+
+.orders-logout-btn {
+    border: none;
+    border-radius: 9px;
+    background: #174d35;
+    color: #ffffff;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.orders-logout-btn:hover {
+    background: #0f3d29;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.orders-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 25px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.orders-eyebrow {
+    margin: 0 0 8px;
+    color: #f47b20;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.orders-header h1 {
+    margin: 0;
+    color: #173f2d;
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.orders-header h1 span {
+    color: #f47b20;
+}
+
+.orders-header > div:first-child > p:last-child {
+    margin: 10px 0 0;
+    color: #75837c;
+    font-size: 14px;
+}
+
+.orders-count-card {
+    min-width: 165px;
+    padding: 17px 20px;
+    border: 1px solid #e1eae4;
+    background: #ffffff;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    box-shadow: 0 6px 20px rgba(23, 77, 53, 0.05);
+}
+
+.orders-count-card > span {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    background: #fff3e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.orders-count-card div {
+    display: flex;
+    flex-direction: column;
+}
+
+.orders-count-card strong {
+    color: #173f2d;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.orders-count-card small {
+    margin-top: 4px;
+    color: #84918b;
+    font-size: 10px;
+}
+
+/* =========================
+   ALERT
+========================= */
+
+.orders-alert {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    padding: 14px 17px;
+    border: 1px solid #f0cccc;
+    border-radius: 11px;
+    background: #fff2f2;
+    color: #a33c3c;
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.orders-alert > span {
+    font-size: 18px;
+}
+
+.orders-alert strong {
+    font-size: 13px;
+}
+
+.orders-alert p {
+    margin: 4px 0 0;
+    font-size: 12px;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.orders-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px 60px;
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.orders-empty {
+    background: #ffffff;
+    border: 1px solid #e2eae5;
+    border-radius: 18px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 7px 25px rgba(23, 77, 53, 0.04);
+}
+
+.empty-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #f0f7f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.orders-empty h2 {
+    margin: 0;
+    color: #173f2d;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+}
+
+.orders-empty p {
+    margin: 8px 0 22px;
+    color: #84918b;
+    font-size: 13px;
+}
+
+.browse-food-btn {
+    text-decoration: none;
+    background: #f47b20;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 12px 19px;
+    font-size: 12px;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s ease;
+}
+
+.browse-food-btn:hover {
+    background: #df6913;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   ORDER LIST
+========================= */
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.order-card {
+    background: #ffffff;
+    border: 1px solid #e1e9e4;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 7px 24px rgba(23, 77, 53, 0.045);
+    transition: 0.2s ease;
+}
+
+.order-card:hover {
+    border-color: #d3dfd8;
+    box-shadow: 0 10px 30px rgba(23, 77, 53, 0.07);
+}
+
+/* =========================
+   ORDER TOP
+========================= */
+
+.order-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #edf1ee;
+}
+
+.order-label {
+    margin: 0 0 3px;
+    color: #f47b20;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.order-card-top h2 {
+    margin: 0;
+    color: #173f2d;
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+}
+
+.order-status {
+    padding: 7px 12px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.status-placed {
+    background: #fff4df;
+    color: #a96800;
+}
+
+.status-confirmed {
+    background: #eaf5ff;
+    color: #2872aa;
+}
+
+.status-preparing {
+    background: #f2edff;
+    color: #7052a5;
+}
+
+.status-delivery {
+    background: #e9f8f0;
+    color: #27804b;
+}
+
+.status-completed {
+    background: #e7f7eb;
+    color: #287743;
+}
+
+.status-cancelled {
+    background: #fff0f0;
+    color: #b34444;
+}
+
+.status-default {
+    background: #eef2ef;
+    color: #617069;
+}
+
+/* =========================
+   ORDER DETAILS
+========================= */
+
+.order-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.order-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+}
+
+.detail-icon {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: #f3f8f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.order-detail div {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-detail small {
+    margin-bottom: 4px;
+    color: #8a9690;
+    font-size: 10px;
+}
+
+.order-detail strong {
+    color: #43534b;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   ORDER BOTTOM
+========================= */
+
+.order-card-bottom {
+    border-top: 1px solid #edf1ee;
+    padding-top: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.order-total {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-total small {
+    color: #89958f;
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+.order-total strong {
+    color: #173f2d;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+}
+
+.order-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cancel-order-btn {
+    border: 1px solid #efcccc;
+    background: #fff7f7;
+    color: #b34444;
+    padding: 10px 15px;
+    border-radius: 9px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.cancel-order-btn:hover:not(:disabled) {
+    background: #fff0f0;
+    border-color: #e4aaaa;
+}
+
+.cancel-order-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.orders-loading {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.orders-spinner {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 3px solid #dfe9e3;
+    border-top-color: #f47b20;
+    animation: ordersSpin 0.8s linear infinite;
+}
+
+.orders-loading h3 {
+    margin: 15px 0 4px;
+    color: #173f2d;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+}
+
+.orders-loading p {
+    margin: 0;
+    color: #89958f;
+    font-size: 12px;
+}
+
+@keyframes ordersSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+

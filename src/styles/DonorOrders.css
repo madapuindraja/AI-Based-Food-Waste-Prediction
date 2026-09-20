@@ -1,0 +1,816 @@
+.donor-orders-page {
+min-height: 100vh;
+background: #f7faf8;
+color: #18352a;
+font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+.donor-orders-navbar {
+min-height: 74px;
+background: #ffffff;
+border-bottom: 1px solid #e7eee9;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 5%;
+position: sticky;
+top: 0;
+z-index: 100;
+box-shadow: 0 3px 15px rgba(18, 61, 42, 0.05);
+}
+
+.donor-orders-logo {
+display: flex;
+align-items: center;
+gap: 12px;
+cursor: pointer;
+}
+
+.donor-orders-logo-icon {
+width: 42px;
+height: 42px;
+border-radius: 12px;
+background: #f97316;
+color: #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 15px;
+font-weight: 800;
+box-shadow: 0 6px 14px rgba(249, 115, 22, 0.22);
+}
+
+.donor-orders-logo div:last-child {
+display: flex;
+flex-direction: column;
+line-height: 1.2;
+}
+
+.donor-orders-logo strong {
+font-size: 17px;
+color: #123d2b;
+}
+
+.donor-orders-logo span {
+font-size: 11px;
+color: #7a8c84;
+margin-top: 3px;
+}
+
+.donor-orders-nav-links {
+display: flex;
+align-items: center;
+gap: 6px;
+}
+
+.donor-orders-nav-btn {
+border: none;
+background: transparent;
+color: #53675e;
+padding: 10px 13px;
+border-radius: 9px;
+font-size: 13px;
+font-weight: 600;
+cursor: pointer;
+transition: background 0.18s ease, color 0.18s ease;
+}
+
+.donor-orders-nav-btn:hover {
+background: #f0f7f3;
+color: #0d6b45;
+}
+
+.donor-orders-nav-btn.active {
+background: #eaf7ef;
+color: #0c7047;
+}
+
+.donor-orders-logout-btn {
+margin-left: 8px;
+border: 1px solid #f0c9b5;
+background: #fff8f4;
+color: #d95717;
+padding: 10px 15px;
+border-radius: 9px;
+font-size: 13px;
+font-weight: 700;
+cursor: pointer;
+transition: all 0.18s ease;
+}
+
+.donor-orders-logout-btn:hover {
+background: #f97316;
+border-color: #f97316;
+color: #ffffff;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.donor-orders-header {
+background: linear-gradient(135deg, #fff8f2 0%, #f2faf5 100%);
+border-bottom: 1px solid #e8eee9;
+padding: 48px 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 30px;
+}
+
+.donor-orders-eyebrow {
+margin: 0 0 8px;
+color: #f97316;
+font-size: 11px;
+font-weight: 800;
+letter-spacing: 1.6px;
+}
+
+.donor-orders-header h1 {
+margin: 0;
+color: #123d2b;
+font-size: 34px;
+line-height: 1.15;
+font-weight: 800;
+}
+
+.donor-orders-header > div > p:last-child {
+margin: 10px 0 0;
+color: #6d7f77;
+font-size: 14px;
+}
+
+.back-dashboard-btn {
+border: 1px solid #dce8e1;
+background: #ffffff;
+color: #175c41;
+padding: 12px 18px;
+border-radius: 10px;
+font-size: 13px;
+font-weight: 700;
+cursor: pointer;
+transition: all 0.18s ease;
+white-space: nowrap;
+}
+
+.back-dashboard-btn:hover {
+background: #0e6b46;
+color: #ffffff;
+border-color: #0e6b46;
+}
+
+/* =========================
+MAIN CONTAINER
+========================= */
+
+.donor-orders-container {
+width: 90%;
+max-width: 1600px;
+margin: 0 auto;
+padding: 32px 0 60px;
+}
+
+/* =========================
+ALERT
+========================= */
+
+.donor-orders-alert {
+min-height: 48px;
+background: #fff2ef;
+border: 1px solid #f3c9c0;
+border-radius: 10px;
+color: #a63b28;
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 12px 15px;
+margin-bottom: 24px;
+font-size: 13px;
+font-weight: 600;
+}
+
+.donor-orders-alert button {
+margin-left: auto;
+border: none;
+background: transparent;
+color: #a63b28;
+font-size: 20px;
+cursor: pointer;
+}
+
+/* =========================
+SUMMARY
+========================= */
+
+.orders-summary {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 18px;
+margin-bottom: 30px;
+}
+
+.orders-summary-card {
+background: #ffffff;
+border: 1px solid #e3ece7;
+border-radius: 15px;
+padding: 20px;
+display: flex;
+align-items: center;
+gap: 14px;
+box-shadow: 0 5px 18px rgba(17, 65, 45, 0.045);
+}
+
+.summary-icon {
+width: 46px;
+height: 46px;
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 20px;
+flex-shrink: 0;
+}
+
+.total-icon {
+background: #fff1e7;
+}
+
+.active-icon {
+background: #e9f6ef;
+}
+
+.delivered-icon {
+background: #e5f6ed;
+color: #11804f;
+}
+
+.cancelled-icon {
+background: #fff0ed;
+color: #c34a31;
+}
+
+.orders-summary-card span {
+display: block;
+color: #788981;
+font-size: 12px;
+margin-bottom: 5px;
+}
+
+.orders-summary-card strong {
+display: block;
+color: #163e2d;
+font-size: 23px;
+font-weight: 800;
+}
+
+/* =========================
+ORDERS SECTION
+========================= */
+
+.received-orders-section {
+background: #ffffff;
+border: 1px solid #e2ebe6;
+border-radius: 17px;
+overflow: hidden;
+box-shadow: 0 7px 25px rgba(20, 68, 47, 0.055);
+}
+
+.received-orders-heading {
+padding: 23px 25px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-bottom: 1px solid #e8eeeb;
+}
+
+.received-orders-heading p {
+margin: 0 0 5px;
+color: #f97316;
+font-size: 10px;
+font-weight: 800;
+letter-spacing: 1.3px;
+}
+
+.received-orders-heading h2 {
+margin: 0;
+color: #173e2d;
+font-size: 20px;
+font-weight: 800;
+}
+
+.refresh-orders-btn {
+border: 1px solid #dce8e1;
+background: #f9fcfa;
+color: #166444;
+padding: 10px 15px;
+border-radius: 9px;
+cursor: pointer;
+font-size: 12px;
+font-weight: 700;
+}
+
+.refresh-orders-btn:hover {
+background: #eaf7ef;
+}
+
+.refresh-orders-btn:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+}
+
+/* =========================
+TABLE
+========================= */
+
+.orders-table-wrapper {
+width: 100%;
+overflow-x: auto;
+}
+
+.received-orders-table {
+width: 100%;
+min-width: 1250px;
+border-collapse: collapse;
+}
+
+.received-orders-table th {
+background: #f7faf8;
+color: #60736b;
+font-size: 10px;
+text-transform: uppercase;
+letter-spacing: 0.7px;
+font-weight: 800;
+text-align: left;
+padding: 14px 15px;
+border-bottom: 1px solid #e4ebe7;
+white-space: nowrap;
+}
+
+.received-orders-table td {
+padding: 17px 15px;
+border-bottom: 1px solid #edf1ef;
+vertical-align: middle;
+color: #42564e;
+font-size: 12px;
+}
+
+.received-orders-table tbody tr {
+transition: background 0.18s ease;
+}
+
+.received-orders-table tbody tr:hover {
+background: #fbfdfc;
+}
+
+.received-orders-table tbody tr:last-child td {
+border-bottom: none;
+}
+
+.table-order-id {
+color: #0b6b45;
+background: #eef8f2;
+border-radius: 7px;
+padding: 6px 9px;
+font-size: 12px;
+font-weight: 800;
+}
+
+/* =========================
+CUSTOMER
+========================= */
+
+.table-customer {
+display: flex;
+align-items: center;
+gap: 9px;
+min-width: 135px;
+}
+
+.customer-avatar {
+width: 34px;
+height: 34px;
+border-radius: 50%;
+background: #fff0e6;
+color: #ef6b18;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 12px;
+font-weight: 800;
+flex-shrink: 0;
+}
+
+.table-customer strong {
+display: block;
+color: #203f33;
+font-size: 12px;
+margin-bottom: 3px;
+}
+
+.table-customer span {
+display: block;
+color: #87948f;
+font-size: 10px;
+}
+
+/* =========================
+FOOD ITEMS
+========================= */
+
+.table-food-items {
+min-width: 150px;
+}
+
+.table-food-item {
+padding: 4px 0;
+}
+
+.table-food-item strong {
+display: block;
+color: #28483b;
+font-size: 12px;
+}
+
+.table-food-item span {
+display: block;
+color: #89958f;
+font-size: 10px;
+margin-top: 2px;
+}
+
+/* =========================
+ADDRESS
+========================= */
+
+.table-address {
+max-width: 180px;
+display: flex;
+align-items: flex-start;
+gap: 6px;
+line-height: 1.4;
+}
+
+.address-icon {
+flex-shrink: 0;
+}
+
+.table-address > span:last-child {
+color: #596d64;
+font-size: 11px;
+}
+
+/* =========================
+PAYMENT
+========================= */
+
+.payment-badge {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+background: #f4f8f6;
+border: 1px solid #dce7e1;
+color: #456359;
+border-radius: 7px;
+padding: 6px 9px;
+font-size: 10px;
+font-weight: 800;
+}
+
+/* =========================
+DATE & TOTAL
+========================= */
+
+.table-date {
+color: #73827c;
+font-size: 10px;
+white-space: nowrap;
+}
+
+.table-total {
+color: #153f2e;
+font-size: 13px;
+white-space: nowrap;
+}
+
+/* =========================
+DELIVERY STATUS
+========================= */
+
+.received-order-status {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+border-radius: 20px;
+padding: 7px 10px;
+font-size: 10px;
+font-weight: 800;
+white-space: nowrap;
+}
+
+.status-dot {
+width: 6px;
+height: 6px;
+border-radius: 50%;
+background: currentColor;
+}
+
+.status-placed {
+background: #fff5df;
+color: #a86d08;
+}
+
+.status-processing {
+background: #eaf3ff;
+color: #3b6fa8;
+}
+
+.status-ready {
+background: #f0ebff;
+color: #7353ad;
+}
+
+.status-out-delivery {
+background: #fff0df;
+color: #d56a14;
+}
+
+.status-delivered {
+background: #e7f7ed;
+color: #16814f;
+}
+
+.status-cancelled {
+background: #fff0ed;
+color: #bd4a35;
+}
+
+/* =========================
+UPDATE DELIVERY BUTTON
+========================= */
+
+.order-status-btn {
+min-width: 145px;
+border: none;
+background: #0e6b46;
+color: #ffffff;
+border-radius: 8px;
+padding: 9px 11px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 7px;
+font-size: 10px;
+font-weight: 800;
+cursor: pointer;
+transition: all 0.18s ease;
+}
+
+.order-status-btn:hover {
+background: #095638;
+transform: translateY(-1px);
+}
+
+.order-status-btn:disabled {
+opacity: 0.65;
+cursor: not-allowed;
+transform: none;
+}
+
+.order-complete-text {
+color: #16814f;
+background: #edf8f1;
+border-radius: 8px;
+padding: 9px 11px;
+font-size: 10px;
+font-weight: 800;
+white-space: nowrap;
+}
+
+/* =========================
+LOADING
+========================= */
+
+.donor-orders-loading {
+min-height: 300px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: #70817a;
+}
+
+.loading-spinner {
+width: 38px;
+height: 38px;
+border: 3px solid #dcebe3;
+border-top-color: #f97316;
+border-radius: 50%;
+animation: donorOrderSpin 0.8s linear infinite;
+margin-bottom: 15px;
+}
+
+.donor-orders-loading p {
+margin: 0;
+font-size: 13px;
+}
+
+@keyframes donorOrderSpin {
+to {
+transform: rotate(360deg);
+}
+}
+
+/* =========================
+BUTTON SPINNER
+========================= */
+
+.button-spinner {
+width: 12px;
+height: 12px;
+border: 2px solid rgba(255, 255, 255, 0.4);
+border-top-color: #ffffff;
+border-radius: 50%;
+animation: donorButtonSpin 0.7s linear infinite;
+}
+
+@keyframes donorButtonSpin {
+to {
+transform: rotate(360deg);
+}
+}
+
+/* =========================
+EMPTY
+========================= */
+
+.donor-orders-empty {
+min-height: 320px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 40px;
+text-align: center;
+}
+
+.empty-icon {
+width: 70px;
+height: 70px;
+border-radius: 50%;
+background: #f0f7f3;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 30px;
+margin-bottom: 15px;
+}
+
+.donor-orders-empty h3 {
+margin: 0;
+color: #173e2d;
+font-size: 20px;
+}
+
+.donor-orders-empty p {
+margin: 8px 0 20px;
+color: #7b8983;
+font-size: 13px;
+}
+
+.donor-orders-empty button {
+border: none;
+background: #f97316;
+color: #ffffff;
+border-radius: 9px;
+padding: 11px 18px;
+font-size: 12px;
+font-weight: 800;
+cursor: pointer;
+}
+
+.donor-orders-empty button:hover {
+background: #e85f0b;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+
+.donor-orders-navbar {
+    padding: 0 3%;
+}
+
+.donor-orders-nav-links {
+    gap: 2px;
+}
+
+.donor-orders-nav-btn {
+    padding: 9px 8px;
+    font-size: 11px;
+}
+
+.orders-summary {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+}
+
+@media (max-width: 800px) {
+
+
+.donor-orders-navbar {
+    min-height: auto;
+    padding: 14px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.donor-orders-nav-links {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 3px;
+}
+
+.donor-orders-nav-btn,
+.donor-orders-logout-btn {
+    flex-shrink: 0;
+}
+
+.donor-orders-header {
+    padding: 35px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.donor-orders-header h1 {
+    font-size: 28px;
+}
+
+.back-dashboard-btn {
+    width: 100%;
+}
+
+.donor-orders-container {
+    width: 94%;
+    padding-top: 22px;
+}
+
+.orders-summary {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.orders-summary-card {
+    padding: 15px;
+}
+
+.summary-icon {
+    width: 40px;
+    height: 40px;
+}
+
+
+}
+
+@media (max-width: 520px) {
+
+.donor-orders-logo strong {
+    font-size: 15px;
+}
+
+.donor-orders-logo span {
+    font-size: 10px;
+}
+
+.orders-summary {
+    grid-template-columns: 1fr;
+}
+
+.received-orders-heading {
+    padding: 18px;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.received-orders-heading h2 {
+    font-size: 17px;
+}
+
+.refresh-orders-btn {
+    padding: 8px 10px;
+    font-size: 11px;
+}
+
+.donor-orders-alert {
+    font-size: 11px;
+}
+}
